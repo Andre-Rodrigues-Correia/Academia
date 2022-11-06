@@ -59,7 +59,7 @@ Instale Academia-API com npm, estando na raiz dp projeto excute os seguintes com
 | `ativo`      | `boolean` | **Obrigatório**. O status do aluno que você quer no formato true ou false|
 | `ficha`      | `array` | . A ou as ficha do aluno que você quer |
 
-#### atualiza um aluno
+#### Atualiza um aluno
 
 ```http
   PUT /api/alunos/{id}
@@ -75,7 +75,7 @@ Instale Academia-API com npm, estando na raiz dp projeto excute os seguintes com
 | `ativo`      | `boolean` | **Obrigatório**. O status do aluno que você quer no formato true ou false|
 | `ficha`      | `array` | . A ou as ficha do aluno que você quer |
 
-#### delata um aluno específico
+#### Delata um aluno específico
 
 ```http
   DEL /api/alunos/${id}
@@ -116,7 +116,7 @@ Instale Academia-API com npm, estando na raiz dp projeto excute os seguintes com
 | `senha`      | `string` | **Obrigatório**. A senha do instrutor que você quer |
 | `ativo`      | `boolean` | **Obrigatório**. O status do instrutor que você quer no formato true ou false|
 
-#### atualiza um instrutor
+#### Atualiza um instrutor
 
 ```http
   PUT /api/instrutores/{id}
@@ -131,7 +131,7 @@ Instale Academia-API com npm, estando na raiz dp projeto excute os seguintes com
 | `senha`      | `string` | **Obrigatório**. A senha do instrutor que você quer |
 | `ativo`      | `boolean` | **Obrigatório**. O status do instrutor que você quer no formato true ou false|
 
-#### delata um instrutor específico
+#### Delata um instrutor específico
 
 ```http
   DEL /api/instrutores/${id}
@@ -140,11 +140,166 @@ Instale Academia-API com npm, estando na raiz dp projeto excute os seguintes com
 | Parâmetro   | Tipo       | Descrição                                   |
 | :---------- | :--------- | :------------------------------------------ |
 | `id`      | `string` | **Obrigatório**. O ID do instrutor que você quer |
+
+## rota Fichas
+#### Retorna todos as fichas
+
+```http
+  GET /api/fichas/
+```
+
+#### Retorna uma ficha específica
+
+```http
+  GET /api/fichas/${id}
+```
+
+| Parâmetro   | Tipo       | Descrição                                   |
+| :---------- | :--------- | :------------------------------------------ |
+| `id`      | `string` | **Obrigatório**. O ID da ficha que você quer |
+
+#### Cadastra uma ficha
+
+```http
+  POST /api/fichas/
+```
+| Parâmetro   | Tipo       | Descrição                                   |
+| :---------- | :--------- | :------------------------------------------ |
+| `aluno`      | `string` | **Obrigatório**. O Nome do aluno que você quer |
+| `instrutor`      | `string` | **Obrigatório**. O Nome do instrutor que você quer |
+| `ativa`      | `boolean` | **Obrigatório**. O status da ficha que você quer no formato true ou false |
+| `dataInicio`      | `date` | **Obrigatório**. A data de início que você quer no formato yyyy/mm/dd |
+| `execucoes`      | `array` | **Obrigatório**. A ou as execuções que você quer |
+
+#### Atualiza uma ficha
+
+```http
+  PUT /api/fichas/{id}
+```
+| Parâmetro   | Tipo       | Descrição                                   |
+| :---------- | :--------- | :------------------------------------------ |
+| `id`      | `string` | **Obrigatório**. O ID da ficha que você quer |
+| `aluno`      | `string` | **Obrigatório**. O Nome do aluno que você quer |
+| `instrutor`      | `string` | **Obrigatório**. O Nome do instrutor que você quer |
+| `ativa`      | `boolean` | **Obrigatório**. O status da ficha que você quer no formato true ou false |
+| `dataInicio`      | `date` | **Obrigatório**. A data de início que você quer no formato yyyy/mm/dd |
+| `execucoes`      | `array` | **Obrigatório**. A ou as execuções que você quer |
+
+#### Delata uma ficha específica
+
+```http
+  DEL /api/fichas/${id}
+```
+
+| Parâmetro   | Tipo       | Descrição                                   |
+| :---------- | :--------- | :------------------------------------------ |
+| `id`      | `string` | **Obrigatório**. O ID da ficha que você quer |
+
+## rota Grupo Muscular
+#### Retorna todos os grupos musculares
+
+```http
+  GET /api/gruposmusculares/
+```
+
+#### Retorna um grupo muscular específico
+
+```http
+  GET /api/gruposmusculares/${id}
+```
+
+| Parâmetro   | Tipo       | Descrição                                   |
+| :---------- | :--------- | :------------------------------------------ |
+| `id`      | `string` | **Obrigatório**. O ID do grupo muscular que você quer |
+
+#### Cadastra um grupo muscular
+
+```http
+  POST /api/gruposmusculares/
+```
+| Parâmetro   | Tipo       | Descrição                                   |
+| :---------- | :--------- | :------------------------------------------ |
+| `nome`      | `string` | **Obrigatório**. O Nome do grupo muscular que você quer |
+
+#### Atualiza um grupo muscular
+
+```http
+  PUT /api/gruposmusculares/{id}
+```
+| Parâmetro   | Tipo       | Descrição                                   |
+| :---------- | :--------- | :------------------------------------------ |
+| `id`      | `string` | **Obrigatório**. O ID do grupo muscular que você quer |
+| `nome`      | `string` | **Obrigatório**. O Nome do grupo muscular que você quer |
+
+#### Delata um grupo muscular específico
+
+```http
+  DEL /api/gruposmusculares/${id}
+```
+
+| Parâmetro   | Tipo       | Descrição                                   |
+| :---------- | :--------- | :------------------------------------------ |
+| `id`      | `string` | **Obrigatório**. O ID do grupo muscular que você quer |
+
+## rota Tipo Exercício
+#### Retorna todos os tipos de exercícios
+
+```http
+  GET /api/tipoexercicios/
+```
+
+#### Retorna um tipo de exercício específico
+
+```http
+  GET /api/tipoexercicios/${id}
+```
+
+| Parâmetro   | Tipo       | Descrição                                   |
+| :---------- | :--------- | :------------------------------------------ |
+| `id`      | `string` | **Obrigatório**. O ID do tipo de exercício que você quer |
+
+#### Cadastra um tipo de exercício
+
+```http
+  POST /api/tipoexercicios/
+```
+| Parâmetro   | Tipo       | Descrição                                   |
+| :---------- | :--------- | :------------------------------------------ |
+| `nome`      | `string` | **Obrigatório**. O Nome do tipo de exercício que você quer |
+| `pesoMinimo`      | `number` | **Obrigatório**. O Número de peso mínimo que você quer |
+| `pesoMaximo`      | `number` | **Obrigatório**. O Número de peso máximo que você quer |
+| `degrauPeso`      | `number` | **Obrigatório**. O Número de degrau de peso que você quer |
+| `grupoMuscular`      | `array` | **Obrigatório**. O Nome do grupo muscular que você quer |
+
+#### Atualiza um tipo de exercício
+
+```http
+  PUT /api/tipoexercicios/{id}
+```
+| Parâmetro   | Tipo       | Descrição                                   |
+| :---------- | :--------- | :------------------------------------------ |
+| `id`      | `string` | **Obrigatório**. O ID do tipo de exercício que você quer |
+| `nome`      | `string` | **Obrigatório**. O Nome do tipo de exercício que você quer |
+| `pesoMinimo`      | `number` | **Obrigatório**. O Número de peso mínimo que você quer |
+| `pesoMaximo`      | `number` | **Obrigatório**. O Número de peso máximo que você quer |
+| `degrauPeso`      | `number` | **Obrigatório**. O Número de degrau de peso que você quer |
+| `grupoMuscular`      | `array` | **Obrigatório**. O Nome do grupo muscular que você quer |
+
+#### Delata um tipo de exercício específico
+
+```http
+  DEL /api/tipoexercicios/${id}
+```
+
+| Parâmetro   | Tipo       | Descrição                                   |
+| :---------- | :--------- | :------------------------------------------ |
+| `id`      | `string` | **Obrigatório**. O ID do tipo de exercício que você quer |
+
 ## Melhorias
 
 É necessário adicionar autenticação em algumas rotas.
 
-## Autor
+## Autores
 
 - [@Andre-Rodrigues-Correia](https://github.com/Andre-Rodrigues-Correia)
-
+- [@WilliamDS-Uchiha](https://github.com/WilliamDS-Uchiha)
