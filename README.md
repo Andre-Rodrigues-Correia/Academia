@@ -21,6 +21,9 @@ Instale Academia-API com npm, estando na raiz dp projeto excute os seguintes com
 ```bash
   npm install
 ```
+```bash
+  npm start
+```
     
 ## Documentação da API
 
