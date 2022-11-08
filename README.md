@@ -75,7 +75,7 @@ Instale Academia-API com npm, estando na raiz dp projeto excute os seguintes com
 | `ativo`      | `boolean` | **Obrigatório**. O status do aluno que você quer no formato true ou false|
 | `ficha`      | `array` | . A ou as ficha do aluno que você quer |
 
-#### Delata um aluno específico
+#### Deleta um aluno específico
 
 ```http
   DEL /api/alunos/${id}
@@ -131,7 +131,7 @@ Instale Academia-API com npm, estando na raiz dp projeto excute os seguintes com
 | `senha`      | `string` | **Obrigatório**. A senha do instrutor que você quer |
 | `ativo`      | `boolean` | **Obrigatório**. O status do instrutor que você quer no formato true ou false|
 
-#### Delata um instrutor específico
+#### Deleta um instrutor específico
 
 ```http
   DEL /api/instrutores/${id}
