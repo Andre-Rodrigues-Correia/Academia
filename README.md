@@ -27,8 +27,22 @@ Instale Academia-API com npm, estando na raiz dp projeto excute os seguintes com
     
 ## Documentação da API
 
+## rota de autenticação
+### instrutores
+```http
+POST /api/auth/instrutores/login
+```
+
+### alunos
+```http
+POST /api/auth/alunos/login
+```
+
 ## rota Alunos
 #### Retorna todos os alunos
+```http
+  GET /api/alunos/
+```
 
 ```http
   GET /api/alunos/
