@@ -6,11 +6,12 @@ import { errorHandling } from './utils/error.js';
 import routesAlunos from './routes/routesAlunos.js';
 import routesInstrutores from './routes/routesInstrutor.js';
 import routesFichas from './routes/routesFichas.js';
-import routeAuth from './routes/authRoutes.js';
+import routeAuth from './routes/authRoutes.js'
 import routesGruposMusculares from './routes/routesGruposMusculares.js';
 import routesTiposExerxixios from './routes/routesTiposExercicios.js';
 import connectDatabase from './database/database.js';
 import { verificarToken } from './utils/verificarToken.js';
+import jsonwebtoken from 'jsonwebtoken';
 
 const app = express();
 
@@ -18,8 +19,11 @@ dotenv.config();
 
 app.use(
   express.json(),
-  cors(),
   cookieParser(),
+  cors({
+    credentials: true,
+    origin: "http://localhost:3000",
+  }),
   express.urlencoded({ extended: true }),
   errorHandling,
 );
